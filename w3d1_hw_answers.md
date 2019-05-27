@@ -1,6 +1,6 @@
 
 QUESTION 1
-
+------------------
  SELECT * FROM movies;
  psql -d marvel -f marvel.sql
 
@@ -29,12 +29,12 @@ QUESTION 1
  (20 rows)
 
  QUESTION 2
-
+---------------
  SELECT name FROM people;
  psql -d marvel -f marvel.sql
 
  name        
---------------------
+
 George Gordon
 Stephen Gossip
 Simon Hall
@@ -54,7 +54,7 @@ Jeremy Wood
 (16 rows)
 
 QUESTION 3
-
+----------------
 UPDATE people SET name = 'Chae Nicholson' WHERE name = 'Shae Nicholsun';
 
 SELECT * FROM people WHERE name = 'Chae Nicholson';
@@ -67,18 +67,18 @@ id |      name
 (1 row)
 
 QUESTION 4
-
+-----------------
 SELECT name FROM people WHERE name = 'Stephen Gossip';
 
 psql -d marvel -f marvel.sql
 
 name      
-----------------
+
 Stephen Gossip
 (1 row)
 
 QUESTION 5
-
+----------------
 DELETE FROM movies WHERE title = 'Batman Begins';
 SELECT title FROM movies WHERE title = 'Batman Begins';
 
@@ -86,11 +86,11 @@ psql -d marvel -f marvel.sql
 
 DELETE 1
  title
--------
+
 (0 rows)
 
 QUESTION 6
-
+---------------
 INSERT INTO people (name) VALUES ('Louise Camlin');
 SELECT * FROM people WHERE name = 'Louise Camlin';
 
@@ -102,7 +102,7 @@ id |     name
 (1 row)
 
 QUESTION 7
-
+----------------
 DELETE FROM people WHERE name = 'Harrison Booth';
 SELECT * FROM people WHERE name = 'Harrison Booth';
 
@@ -114,7 +114,7 @@ DELETE 1
 (0 rows)
 
 QUESTION 8
-
+---------------
 INSERT INTO movies (title, year, show_time) VALUES ('Captain Marvel', 2019, '00:00');
 SELECT * FROM movies WHERE title = 'Captain Marvel';
 
@@ -127,7 +127,7 @@ INSERT 0 1
 (1 row)
 
 QUESTION 9
-
+----------------
 SELECT show_time FROM movies WHERE title = 'Guardians of the Galaxy';
 UPDATE movies SET show_time = '01:40' WHERE title = 'Guardians of the Galaxy 2';
 SELECT * FROM movies WHERE title = 'Guardians of the Galaxy 2';
@@ -135,7 +135,7 @@ SELECT * FROM movies WHERE title = 'Guardians of the Galaxy 2';
 psql -d marvel -f marvel.sql
 
 show_time
------------
+
  23:40
 (1 row)
 
@@ -146,7 +146,7 @@ UPDATE 1
 (1 row)
 
 Extensions
-
+----------------
 DELETE FROM people WHERE name = 'Stephen Gossip' OR name = 'Harrison Booth';
 SELECT * FROM people;
 
