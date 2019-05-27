@@ -2,7 +2,9 @@
 QUESTION 1
 ------------------
  SELECT * FROM movies;
+```
  psql -d marvel -f marvel.sql
+
 
   id |                title                | year | show_time
  ----+-------------------------------------+------+-----------
@@ -27,10 +29,11 @@ QUESTION 1
   19 | Black Panther                       | 2018 | 17:45
   20 | Avengers: Infinity War              | 2018 | 14:50
  (20 rows)
-
+```
  QUESTION 2
 ---------------
  SELECT name FROM people;
+```
  psql -d marvel -f marvel.sql
 
  name        
@@ -52,72 +55,72 @@ Michael Urquhart
 Kyle Walker
 Jeremy Wood
 (16 rows)
-
+```
 QUESTION 3
 ----------------
 UPDATE people SET name = 'Chae Nicholson' WHERE name = 'Shae Nicholsun';
 
 SELECT * FROM people WHERE name = 'Chae Nicholson';
-
+```
 psql -d marvel -f marvel.sql
 
 id |      name      
 ----+----------------
   6 | Chae Nicholson
 (1 row)
-
+```
 QUESTION 4
 -----------------
 SELECT name FROM people WHERE name = 'Stephen Gossip';
-
+```
 psql -d marvel -f marvel.sql
 
 name      
 
 Stephen Gossip
 (1 row)
-
+```
 QUESTION 5
 ----------------
 DELETE FROM movies WHERE title = 'Batman Begins';
 SELECT title FROM movies WHERE title = 'Batman Begins';
-
+```
 psql -d marvel -f marvel.sql
 
 DELETE 1
  title
 
 (0 rows)
-
+```
 QUESTION 6
 ---------------
 INSERT INTO people (name) VALUES ('Louise Camlin');
 SELECT * FROM people WHERE name = 'Louise Camlin';
-
+```
 psql -d marvel -f marvel.sql
 
 id |     name      
 ----+---------------
  17 | Louise Camlin
 (1 row)
-
+```
 QUESTION 7
 ----------------
 DELETE FROM people WHERE name = 'Harrison Booth';
 SELECT * FROM people WHERE name = 'Harrison Booth';
-
+```
 psql -d marvel -f marvel.sql
 
 DELETE 1
  id | name
 ----+------
 (0 rows)
-
+```
 QUESTION 8
 ---------------
 INSERT INTO movies (title, year, show_time) VALUES ('Captain Marvel', 2019, '00:00');
 SELECT * FROM movies WHERE title = 'Captain Marvel';
-
+```
 psql -d marvel -f marvel.sql
 
 INSERT 0 1
@@ -125,13 +128,13 @@ INSERT 0 1
 ----+----------------+------+-----------
  21 | Captain Marvel | 2019 | 00:00
 (1 row)
-
+```
 QUESTION 9
 ----------------
 SELECT show_time FROM movies WHERE title = 'Guardians of the Galaxy';
 UPDATE movies SET show_time = '01:40' WHERE title = 'Guardians of the Galaxy 2';
 SELECT * FROM movies WHERE title = 'Guardians of the Galaxy 2';
-
+```
 psql -d marvel -f marvel.sql
 
 show_time
@@ -144,12 +147,12 @@ UPDATE 1
 ----+---------------------------+------+-----------
  16 | Guardians of the Galaxy 2 | 2017 | 01:40
 (1 row)
-
+```
 Extensions
 ----------------
 DELETE FROM people WHERE name = 'Stephen Gossip' OR name = 'Harrison Booth';
 SELECT * FROM people;
-
+```
 psql -d marvel -f marvel.sql
 
 DELETE 2
@@ -170,3 +173,4 @@ DELETE 2
  15 | Kyle Walker
  16 | Jeremy Wood
 (14 rows)
+```
